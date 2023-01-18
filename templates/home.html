@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{ test }}</h1>
+    {% for post in posts %}
+        <div class="post ">
+            <h1>{{ post['title'] }}</h1>
+            <p>{{ post['content'] }}</p>
+            <h3>PRICE: {{ post['price'] }} rs</h3>
+    
+    
+            {% for user in users %}
+                {% if user['id'] == post['seller_ID'] %}
+                    
+                    <h3>seller: {{ post['seller_ID'] }}, {{ user['sname'] }}</h3>
+                {% else %}
+                    
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock content %}
+
+{% block sidebar %}
+<div class="col-md-4">
+    <div class="content-section rounded-corner">
+      <h3>Quick Links</h3>
+      <p class='text-muted'>You can put any information here you'd like.
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-light">Latest Posts</li>
+          <li class="list-group-item list-group-item-light">Announcements</li>
+          <li class="list-group-item list-group-item-light">Calendars</li>
+          <li class="list-group-item list-group-item-light"><a href="{{ url_for('register') }}">register today</a></li>
+        </ul>
+      </p>
+    </div>
+</div>
+{% endblock sidebar %}
