@@ -1,3 +1,6 @@
+'''this file was created to test your database schema.
+it doesn't play a usefull role in app and don't ship it with final package'''
+
 import sqlite3
 #this is how you will edit data
 '''multiline comment finally'''

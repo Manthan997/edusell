@@ -16,8 +16,7 @@ CREATE TABLE posts (
     price FLOAT NOT NULL,
     seller_ID INTEGER NOT NULL,
     seller_name VARCHAR ,
-    FOREIGN KEY(seller_ID) REFERENCES suser(id),
-    FOREIGN KEY(seller_name) REFERENCES suser(sname)
+    FOREIGN KEY(seller_ID) REFERENCES suser(id)
 );
 
 CREATE TABLE suser(
