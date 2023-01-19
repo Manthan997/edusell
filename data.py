@@ -6,7 +6,7 @@ connection=sqlite3.connect('database.db')
 cur = connection.cursor()
 
 cur.execute("INSERT INTO suser(sname, gr_no, branch, email, passw) VALUES (?, ?, ?, ?, ?)",
-                    ('ravi', '11', 'extc', 'email1@co.in', 'pass')
+                    ('raviraj', '11', 'extc', 'email1@co.in', 'pass')
                     )
 
 cur.execute("INSERT INTO suser(sname, gr_no, branch, email, passw) VALUES (?, ?, ?, ?, ?)",
